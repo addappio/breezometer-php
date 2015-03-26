@@ -1,4 +1,4 @@
-# Breezometer
+# Breezometer php
 
 [![Latest Version](https://img.shields.io/github/release/nwidart/Breezometer.svg?style=flat-square)](https://github.com/nwidart/Breezometer/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -7,7 +7,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/nwidart/Breezometer.svg?style=flat-square)](https://scrutinizer-ci.com/g/nwidart/Breezometer)
 [![Total Downloads](https://img.shields.io/packagist/dt/nwidart/Breezometer.svg?style=flat-square)](https://packagist.org/packages/nwidart/Breezometer)
 
-A PHP wrapper package for the [Breezometer](http://breezometer.com/) [API](http://breezometer.com/api/).
+A PHP client package for the [Breezometer](http://breezometer.com/) [API](http://breezometer.com/api/).
 
 ## Install
 

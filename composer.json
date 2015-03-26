@@ -1,6 +1,6 @@
 {
-    "name": "nwidart/breezometer",
-    "description": "PHP wrapper package for the Breezometer",
+    "name": "nwidart/breezometer-php",
+    "description": "PHP client package for the Breezometer",
     "keywords": [
         "php",
         "Breezometer",
