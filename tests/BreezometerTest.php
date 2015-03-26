@@ -39,6 +39,14 @@ class BreezometerTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_should_return_decoded_json_from_location()
+    {
+        $response = $this->breezometer->baqiFromLocation('New+York');
+
+        $this->assertArrayHasKey('country_name', $response);
+    }
+
+    /** @test */
     public function it_should_throw_exception_if_no_latitude_given()
     {
         $this->setExpectedException('InvalidArgumentException', 'latitude is required.');
@@ -52,5 +60,13 @@ class BreezometerTest extends \PHPUnit_Framework_TestCase
         $this->setExpectedException('InvalidArgumentException', 'longitude is required.');
 
         $this->breezometer->baqi('40.7324296', null);
+    }
+
+    /** @test */
+    public function it_should_throw_exception_if_no_location_given()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'location is required.');
+
+        $this->breezometer->baqiFromLocation();
     }
 }
