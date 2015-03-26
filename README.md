@@ -14,7 +14,7 @@ A PHP client package for the [Breezometer](http://breezometer.com/) [API](http:/
 Via Composer
 
 ``` bash
-$ composer require nwidart/breezometer
+$ composer require nwidart/breezometer-php
 ```
 
 ## Usage
