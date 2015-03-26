@@ -11,6 +11,11 @@ class Breezometer
 
     private $endpoint = 'http://api-beta.breezometer.com';
 
+    /**
+     * @var Client
+     */
+    private $client;
+
     public function __construct($apiKey)
     {
         $this->apiKey = $apiKey;
@@ -24,8 +29,8 @@ class Breezometer
      */
     public function baqi($lat, $lon)
     {
-        $this->guardAgainstEmptyArguement($lat, 'latitude');
-        $this->guardAgainstEmptyArguement($lon, 'longitude');
+        $this->guardAgainstEmptyArgument($lat, 'latitude');
+        $this->guardAgainstEmptyArgument($lon, 'longitude');
 
         $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?lat={$lat}&lon={$lon}&key={$this->apiKey}");
 
@@ -39,7 +44,7 @@ class Breezometer
      */
     public function baqiFromLocation($location)
     {
-        $this->guardAgainstEmptyArguement($location, 'location');
+        $this->guardAgainstEmptyArgument($location, 'location');
 
         $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?location={$location}&key={$this->apiKey}");
 
@@ -47,10 +52,24 @@ class Breezometer
     }
 
     /**
+     * Set the http client to use
+     * @param $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+    }
+
+    /**
+     * Get the guzzle client
      * @return Client
      */
     private function getClient()
     {
+        if ($this->client) {
+            return $this->client;
+        }
+
         return new Client();
     }
 
@@ -59,7 +78,7 @@ class Breezometer
      * @param string $argument
      * @param string $argumentName
      */
-    private function guardAgainstEmptyArguement($argument, $argumentName)
+    private function guardAgainstEmptyArgument($argument, $argumentName)
     {
         if (empty($argument)) {
             throw new \InvalidArgumentException("$argumentName is required.");
