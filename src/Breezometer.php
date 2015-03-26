@@ -24,8 +24,8 @@ class Breezometer
      */
     public function baqi($lat, $lon)
     {
-        $this->guardAgainstEmptyArguement($lat);
-        $this->guardAgainstEmptyArguement($lon);
+        $this->guardAgainstEmptyArguement($lat, 'latitude');
+        $this->guardAgainstEmptyArguement($lon, 'longitude');
 
         $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?lat={$lat}&lon={$lon}&key={$this->apiKey}");
 
@@ -39,7 +39,7 @@ class Breezometer
      */
     public function baqiFromLocation($location)
     {
-        $this->guardAgainstEmptyArguement($location);
+        $this->guardAgainstEmptyArguement($location, 'location');
 
         $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?location={$location}&key={$this->apiKey}");
 
@@ -56,13 +56,13 @@ class Breezometer
 
     /**
      * Guard against empty arguments
-     * @param string $arg
-     * @throws \InvalidArgumentException
+     * @param string $argument
+     * @param string $argumentName
      */
-    private function guardAgainstEmptyArguement($arg)
+    private function guardAgainstEmptyArguement($argument, $argumentName)
     {
-        if (empty($arg)) {
-            throw new \InvalidArgumentException;
+        if (empty($argument)) {
+            throw new \InvalidArgumentException("$argumentName is required.");
         }
     }
 }
