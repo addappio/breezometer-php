@@ -27,7 +27,7 @@ class Breezometer
      * @param string $lon
      * @return array
      */
-    public function baqi($lat, $lon)
+    public function baqi($lat = null, $lon = null)
     {
         $this->guardAgainstEmptyArgument($lat, 'latitude');
         $this->guardAgainstEmptyArgument($lon, 'longitude');
@@ -42,7 +42,7 @@ class Breezometer
      * @param string $location
      * @return array
      */
-    public function baqiFromLocation($location)
+    public function baqiFromLocation($location = null)
     {
         $this->guardAgainstEmptyArgument($location, 'location');
 
