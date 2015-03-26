@@ -37,4 +37,12 @@ class BreezometerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('country_name', $response);
     }
+
+    /** @test */
+    public function it_should_throw_exception_if_no_latitude_given()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'latitude is required.');
+
+        $this->breezometer->baqi(null, '-73.9977264');
+    }
 }
