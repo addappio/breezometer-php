@@ -45,4 +45,12 @@ class BreezometerTest extends \PHPUnit_Framework_TestCase
 
         $this->breezometer->baqi(null, '-73.9977264');
     }
+
+    /** @test */
+    public function it_should_throw_exception_if_no_longitude_given()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'longitude is required.');
+
+        $this->breezometer->baqi('40.7324296', null);
+    }
 }
