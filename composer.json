@@ -1,5 +1,5 @@
 {
-    "name": "nwidart/breezometer-php",
+    "name": "addapp/breezometer-php",
     "description": "PHP client package for the Breezometer",
     "keywords": [
         "php",
@@ -7,7 +7,7 @@
         "Air",
         "Pollution"
     ],
-    "homepage": "https://github.com/nwidart/Breezometer",
+    "homepage": "https://github.com/addapp/Breezometer",
     "license": "MIT",
     "authors": [
         {
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Nwidart\\Breezometer\\": "src"
+            "Addapp\\Breezometer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nwidart\\Breezometer\\tests\\": "tests"
+            "Addapp\\Breezometer\\tests\\": "tests"
         }
     },
     "extra": {

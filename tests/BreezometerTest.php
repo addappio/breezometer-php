@@ -1,9 +1,9 @@
-<?php namespace Nwidart\Breezometer\Tests;
+<?php namespace Addapp\Breezometer\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Message\MessageFactory;
 use GuzzleHttp\Subscriber\Mock;
-use Nwidart\Breezometer\Breezometer;
+use Addapp\Breezometer\Breezometer;
 
 class BreezometerTest extends \PHPUnit_Framework_TestCase
 {

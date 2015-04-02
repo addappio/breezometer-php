@@ -22,7 +22,7 @@ $ composer require nwidart/breezometer-php
 ## Usage
 
 ``` php
-$breezometer = new \Nwidart\Breezometer\Breezometer('your_api_key');
+$breezometer = new \Addapp\Breezometer\Breezometer('your_api_key');
 
 $info = $breezometer->baqi('40.7324296', '-73.9977264');
 // or

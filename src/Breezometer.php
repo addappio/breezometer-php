@@ -1,4 +1,4 @@
-<?php namespace Nwidart\Breezometer;
+<?php namespace Addapp\Breezometer;
 
 use GuzzleHttp\Client;
 
