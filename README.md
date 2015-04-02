@@ -9,7 +9,7 @@
 
 A PHP client package for the [Breezometer](http://breezometer.com/) [API](http://breezometer.com/api/).
 
-Want to use this inside a Laravel application? Check out the [Breezometer-Laravel](https://github.com/nWidart/Breezometer-laravel) package.
+Want to use this inside a Laravel application? Check out the [Breezometer-Laravel](https://github.com/addappio/Breezometer-laravel) package.
 
 ## Install
 
