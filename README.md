@@ -1,11 +1,11 @@
 # Breezometer php
 
-[![Latest Version](https://img.shields.io/github/release/nwidart/breezometer-php.svg?style=flat-square)](https://github.com/nwidart/breezometer-php/releases)
+[![Latest Version](https://img.shields.io/github/release/addappio/breezometer-php.svg?style=flat-square)](https://github.com/addappio/breezometer-php/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/nWidart/Breezometer-php/master.svg?style=flat-square)](https://travis-ci.org/nWidart/Breezometer-php)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/nwidart/breezometer-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/nwidart/breezometer-php/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/nwidart/breezometer-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/nwidart/breezometer-php)
-[![Total Downloads](https://img.shields.io/packagist/dt/nwidart/breezometer-php.svg?style=flat-square)](https://packagist.org/packages/nwidart/breezometer-php)
+[![Build Status](https://img.shields.io/travis/addappio/breezometer-php/master.svg?style=flat-square)](https://travis-ci.org/addappio/breezometer-php)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/addappio/breezometer-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/addappio/breezometer-php/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/addappio/breezometer-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/addappio/breezometer-php)
+[![Total Downloads](https://img.shields.io/packagist/dt/addappio/breezometer-php.svg?style=flat-square)](https://packagist.org/packages/addappio/breezometer-php)
 
 A PHP client package for the [Breezometer](http://breezometer.com/) [API](http://breezometer.com/api/).
 
@@ -16,7 +16,7 @@ Want to use this inside a Laravel application? Check out the [Breezometer-Larave
 Via Composer
 
 ``` bash
-$ composer require nwidart/breezometer-php
+$ composer require addapp/breezometer-php
 ```
 
 ## Usage
