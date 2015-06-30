@@ -41,13 +41,14 @@ class Breezometer
     /**
      * Get BreezoMeter Air Quality Index (BAQI) by Address or Location
      * @param string $location
+     * @param string $time
      * @return array
      */
-    public function baqiFromLocation($location = null)
+    public function baqiFromLocation($location = null, $time = null)
     {
         $this->guardAgainstEmptyArgument($location, 'location');
 
-        $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?location={$location}&key={$this->apiKey}");
+        $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?location={$location}&datetime={$time}&key={$this->apiKey}");
 
         return $baqi->json();
     }
