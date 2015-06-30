@@ -25,14 +25,15 @@ class Breezometer
      * Get BreezoMeter Air Quality Index (BAQI) by Latitude & Longitude
      * @param string $lat
      * @param string $lon
+     * @param string $time
      * @return array
      */
-    public function baqi($lat = null, $lon = null)
+    public function baqi($lat = null, $lon = null, $time = null)
     {
         $this->guardAgainstEmptyArgument($lat, 'latitude');
         $this->guardAgainstEmptyArgument($lon, 'longitude');
 
-        $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?lat={$lat}&lon={$lon}&key={$this->apiKey}");
+        $baqi = $this->getClient()->get("{$this->endpoint}/baqi/?lat={$lat}&lon={$lon}&datetime={$time}&key={$this->apiKey}");
 
         return $baqi->json();
     }
