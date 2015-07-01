@@ -26,7 +26,12 @@ $breezometer = new \Addapp\Breezometer\Breezometer('your_api_key');
 
 $info = $breezometer->baqi('40.7324296', '-73.9977264');
 // or
+$info = $breezometer->baqi('40.7324296', '-73.9977264', '2015-06-17T11:11:21');
+// or
 $info = $breezometer->baqiFromLocation('New+York');
+// or
+$info = $breezometer->baqiFromLocation('New+York', '2015-06-17T11:11:21');
+
 ```
 
 Will return something like :
